@@ -60,7 +60,7 @@ nav div.search-container > button {
     background-color: #f1f1f1;
     display: flex;
     flex-direction: column;
-    width: 70%;
+    width: 50%;
     margin: 50px auto;
     flex: 1;
     height: 100%;
@@ -69,8 +69,8 @@ nav div.search-container > button {
   .flex-container > div {
     background-color: #f1f1f1;
     padding: 20px;
-    font-size: 12px;
-    width: 90%;
+    font-size: 18px;
+    width: 75%;
     margin : 30px auto 0 auto;
     box-shadow: 0 0 10px 4px #005C96;
   }
@@ -79,4 +79,36 @@ nav div.search-container > button {
       margin-bottom: 50px !important;
   }
 
+  video, .meme {
+    display: flex;
+    height: 360px;
+    margin: 0px auto;
+  }
 
+  .post-details {
+    display: flex;
+    flex-direction: row;
+}
+
+.post-details > .name {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.date {
+    font-size: 12px;
+    margin-left: auto;
+}
+
+.button {
+    border-color: #005C96;
+    color: #005C96;
+  }
+  
+  .button:hover {
+    background-color: #005C96;
+    border-color: #ffffff;
+    color: #ffffff;
+  }
