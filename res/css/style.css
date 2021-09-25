@@ -75,7 +75,7 @@ nav div.search-container > button {
     box-shadow: 0 0 10px 4px #005C96;
   }
 
-  .post3 {
+  .post3, .login-text{
       margin-bottom: 50px !important;
   }
 
@@ -112,3 +112,43 @@ nav div.search-container > button {
     border-color: #ffffff;
     color: #ffffff;
   }
+
+  .login-container {
+    background-color: #f1f1f1;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 50px auto;
+    flex: 1;
+    height: 100%;
+}
+
+.login-container > div {
+    background-color: #f1f1f1;
+    padding: 20px;
+    font-size: 18px;
+    width: 75%;
+    margin : 30px auto 0 auto;
+  }
+
+.login-text{
+    text-align: center;
+}
+
+.login-text > img {
+    height: 40px;
+}
+
+input {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid #005C96;
+  border-radius: 4px;
+}
+
+#login-btn {
+    background-color: #005C96;
+    color: #ffffff
+}
