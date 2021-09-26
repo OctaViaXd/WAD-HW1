@@ -56,7 +56,7 @@ nav div.search-container > button {
     width: 100%;
 }
 
-.flex-container {
+header + div {
     background-color: #f1f1f1;
     display: flex;
     flex-direction: column;
@@ -113,16 +113,6 @@ nav div.search-container > button {
     color: #ffffff;
   }
 
-  .login-container {
-    background-color: #f1f1f1;
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-    margin: 50px auto;
-    flex: 1;
-    height: 100%;
-}
-
 .login-container > div {
     background-color: #f1f1f1;
     padding: 20px;
@@ -151,4 +141,8 @@ input {
 #login-btn {
     background-color: #005C96;
     color: #ffffff
+}
+
+form ~ a {
+    font-size: 16px;
 }
