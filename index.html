@@ -19,9 +19,15 @@
             <input type="text"><button>Search</button>
         </div>
         <div id="user">
-            <img src="res/images/user.png" alt="User">
+            <img src="res/images/user.png" alt="User" onclick="myFunction()">
         </div>
     </nav>
+    <div class="dropdown">
+        <div class="dropdown-content" id="myDropdown" hidden>
+          <p>Ulysse Winum</p>
+          <p>winumu@3il.fr</p>
+        </div>
+    </div>
 </header>
 
 <div class="flex-container" id="display-data"></div>
@@ -53,6 +59,15 @@
 
                 $('#display-data').prepend(tmp);
             }
-        });
+    });
+    
+    function myFunction() {
+        var dropdown = document.getElementById("myDropdown");
+            if (dropdown.style.display === "none") {
+                dropdown.style.display = "block";
+            } else {
+                dropdown.style.display = "none";
+            }
+    }
         
 </script>
