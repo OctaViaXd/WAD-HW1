@@ -1,0 +1,63 @@
+{
+    "postsdata": [{
+            "name": "Victor Schwartz",
+            "date": "Sep 18, 2021 18:32",
+            "datatxt": "Guys we finnaly found the good one",
+            "media": "res/media/video.mp4"
+        },
+        {
+            "name": "Jack River",
+            "date": "Sep 18, 2021 18:37",
+            "datatxt": "99 little bugs in the code. 99 little bugs in the code. Take one down, patch it around. 127 little bugs in the code …",
+            "media": "null"
+        },
+        {
+            "name": "Martin Noble",
+            "date": "Sep 18, 2021 18:41",
+            "datatxt": "The pains of CSS",
+            "media": "res/media/meme.png"
+        },
+        {
+            "name": "Leon Almeida",
+            "date": "Sep 19, 2021 12:22",
+            "datatxt": "i’ve just ended a thousand years war",
+            "media": "res/media/meme2.png"
+        },
+        {
+            "name": "Jerome Nunez",
+            "date": "Sep 19, 2021 14:21",
+            "datatxt": "A programmer's solution",
+            "media": "res/media/meme3.png"
+        },
+        {
+            "name": "Tom Olivender",
+            "date": "Sep 20, 2021 08:12",
+            "datatxt": "Fullstack devs be like- I am 2 in 1 here!!",
+            "media": "res/media/video2.mp4"
+        },
+        {
+            "name": "Martin Noble",
+            "date": "Sep 20, 2021 11:41",
+            "datatxt": "Coding vs Debugging",
+            "media": "res/media/meme4.png"
+        },
+        {
+            "name": "Frederick Salmondo",
+            "date": "Sep 20, 2021 13:55",
+            "datatxt": "Programming is like sex: One mistake and you have to support it for the rest of your life…",
+            "media": "null"
+        },
+        {
+            "name": "Victoria Perez",
+            "date": "Sep 20, 2021 20:21",
+            "datatxt": "Learning web dev",
+            "media": "res/media/meme5.png"
+        },
+        {
+            "name": "Hektor Candevra",
+            "date": "Sep 21, 2021 16:41",
+            "datatxt": "The definitive guide to understand operators in Javascript",
+            "media": "res/media/meme6.png"
+        }
+    ]
+}

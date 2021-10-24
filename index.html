@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="res/css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 <body>
 <header class="positionned">
@@ -23,71 +24,35 @@
     </nav>
 </header>
 
-<div class="flex-container">
+<div class="flex-container" id="display-data"></div>
 
-   <div class="post1">
-        <div>
-            <div class="post-details">
-                <div>
-                    <img width="45" src="res/images/user.png" alt="">
-                </div>
-                <div class="name">Victor Schwartz</div>
-                <div class="date">Sep 18, 2021 18:32</div>
-            </div>
-        </div>
-        <div>
-            <p>
-                Guys we finnaly found the good one
-            </p>
-            <video autoplay muted loop>
-                <source src="res/media/loading.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </div>
-        <div>
-            <button class="button"><i class="fa fa-thumbs-up"></i></button>
-        </div>
-    </div>
+<script>
 
-    <div class="post2">
-        <div>
-            <div class="post-details">
-                <div>
-                    <img width="45" src="res/images/user.png" alt="">
-                </div>
-                <div class="name">Jack River</div>
-                <div class="date">Sep 18, 2021 18:37</div>
-            </div>
-        </div>
-        <div>
-            <p>
-                99 little bugs in the code. 99 little bugs in the code. Take one down, patch it around. 127 little bugs in the code …
-            </p>
-        </div>
-        <div>
-            <button class="button"><i class="fa fa-thumbs-up"></i></button>
-        </div>
-    </div>
+    $.ajax({
+            url : 'https://api.jsonbin.io/b/61758efcaa02be1d445e2bf6',
+            type : 'get',
+            beforeSend: function(xhr){xhr.setRequestHeader('secret-key', '$2b$10$0tlmvJVVNN9ImamJ8smG6OY7w.neqTJzOEJ7ZxNWth28HHLsi7tR6');},
+            success: function(data) {
+                var obj = JSON.parse(JSON.stringify(data));
+                var count = 0;
+                var tmp = '';
+                while (count < Object.keys(obj.postsdata).length){
+                    tmp += ' <div class="post"> <div> <div class="post-details"> <div>';
+                    tmp += ' <img width="45" src="res/images/user.png" alt="">';
+                    tmp += ' </div> <div class="name">'+ obj.postsdata[count]["name"] +'</div> <div class="date">'+ obj.postsdata[count]["date"]  +'</div> </div> </div>';
+                    tmp += ' <div> <p> '+ obj.postsdata[count]["datatxt"]  +'</p>';
+                    if (obj.postsdata[count]["media"].includes(".mp4")){
+                        tmp += ' <video autoplay muted loop><source src="'+ obj.postsdata[count]["media"] +'" type="video/mp4">Your browser does not support the video tag.</video>';
+                    } else if (obj.postsdata[count]["media"] != "null"){
+                        tmp += ' <img class="meme" src="'+ obj.postsdata[count]["media"] +'" alt="meme"> </div> <div>';
+                    } 
+                    tmp += ' <button class="button"><i class="fa fa-thumbs-up"></i></button> </div> </div> </div>';
 
-    <div class="post3">
-        <div>
-            <div class="post-details">
-                <div>
-                    <img width="45" src="res/images/user.png" alt="">
-                </div>
-                <div class="name">Martin Noble</div>
-                <div class="date">Sep 18, 2021 18:41</div>
-            </div>
-        </div>
-        <div>
-            <p>
-                The pains of CSS
-            </p>
-            <img class="meme" src="res/media/meme.png" alt="meme">
-        </div>
-        <div>
-            <button class="button"><i class="fa fa-thumbs-up"></i></button>
-        </div>
-    </div>
-</div>
+                    count += 1;
+                }
 
+                $('#display-data').prepend(tmp);
+            }
+        });
+        
+</script>
